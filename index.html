@@ -1,0 +1,440 @@
+<!-- <!doctype html> -->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Which Dog Is For You?</title>
+  <link href="dogs.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+
+</head>
+<body>
+
+
+<div>
+    <img src = "https://t4.ftcdn.net/jpg/06/18/84/17/360_F_618841787_TCD6k3IqhP9ZI1cOR80gjGbHMIe7V3Lk.jpg" 
+        class = "w-full md:h-[210px] sm:-h[130px]"/>
+</div>
+    
+
+<div class = "mt-[35px]">
+    <h1 class = "w-fit mx-auto 
+        text-center text-white text-[5vw] font-bold
+        border-solid outline-[#FFC30B] outline-[8px] bg-black p-[15px]">
+        Which Dog Is For You?</h1>    
+</div>
+
+
+<div class = "mt-[25px] mx-auto text-center text-black/90 text-[2vw]">
+    
+    <ul class = "flex justify-self-center gap-[.8vw]">
+        
+        <li>Author: Caleb Kenney</li>
+        <li> | </li>
+        <li>August 4th, 2025</li>
+        <li > | </li>
+        
+        <li>
+            <ul class ="flex gap-[1.3vw]">
+                
+                 <li>
+                    <a href="https://github.com/Joelkenn1">
+                    <img src = "https://cdn-icons-png.flaticon.com/512/25/25231.png" class= "w-[2.2vw] h-[2.2vw]">  
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.linkedin.com/in/caleb-kenney-50b472317/">
+                    <img src = "https://openvisualfx.com/wp-content/uploads/2019/10/linkedin-icon-logo-png-transparent.png" 
+                        class= "w-[2.2vw] h-[2.2vw]">  
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://www.instagram.com/calebkenney_/">
+                    <img src = "https://dreamfoundry.org/wp-content/uploads/2018/12/instagram-logo-png-transparent-background-300x300.png" class= "w-[2.2vw] h-[2.2vw]">  
+                    </a>
+                </li>
+                
+            </ul>
+        </li>
+        
+    </ul>
+    
+</div>
+
+    
+<div class = "mt-[20px] md:mt-[40px] mx-auto">
+
+    <ul class = "flex justify-self-center gap-[4vw]">
+        <li>
+            <img src = "https://cdn-icons-png.flaticon.com/512/3048/3048123.png" class= "w-[17vw] h-[17vw] rotate-340">  
+        </li>
+
+        <li>
+            <img src = "https://cdn-icons-png.flaticon.com/512/235/235405.png" class= "w-[17vw] h-[17vw]">  
+        </li>
+
+         <li>
+            <img src = "https://cdn-icons-png.flaticon.com/512/8250/8250857.png" class= "mt-[2.4vw] md:mt-[40px] w-[15.6vw] h-[15.6vw] rotate-19">  
+        </li>
+        
+    </ul>
+    
+</div>
+
+    
+<div class = "mt-[15px] md:mt-[40px] ml-[11vw] mr-[11vw]">
+    
+    <p class = "text-center text-black/75 text-[1.6vw] text-justify">Finding the right dog can be a challenge, as there are hundreds of breeds to choose from. Not only this, but other vital factors such as family, daily routines, personal health, and the environment must also be considered. This quick and easy survey can make your dog search much more simple. Upon completion, ten dogs will be suggested which best fit your lifestyle.</p>
+    
+</div>
+
+    
+<div class = "mt-[20px] md:mt-[60px]">
+    
+    <h4 class = "w-fit mx-auto 
+        text-center text-white text-[1.6vw] font-bold
+        border-solid rounded-3xl outline-[#FFC30B] outline-[5px] bg-black p-[7px]">
+        Answer The Following Questions Below.</h4>   
+    
+</div>
+
+    
+<div class = "mt-[30px] md:mt-[70px] w-fit mx-auto 
+              text-center text-white text-[2.3vw] font-bold bg-[#FFC30B]
+              border-solid outline-black outline-[5px] outline-dotted
+              pl-[4vw] pr-[4vw] pb-[1.6vw] pt-[1.6vw]">
+
+    <h4>How Old Are You?</h4>
+
+    <div class = "flex justify-self-center mt-[10px]">
+
+      <label for="Age" class="block text-[1.8vw] mr-[6px] mb-[5px]">Age: </label>
+      <input type="text" id="Age" name="Age"
+             class="bg-white text-black mb-[5px] text-[1.4vw] rounded-lg"
+             placeholder=" Enter Your Age">
+        
+    </div>
+    
+    
+</div>
+
+
+<div class = "mt-[30px] md:mt-[70px] w-fit mx-auto 
+              text-center text-white text-[2.3vw] font-bold bg-[#FFC30B]
+              border-solid outline-black outline-[5px] outline-dotted
+              pl-[4vw] pr-[4vw] pb-[1.6vw] pt-[1.6vw]">
+
+    <h4>Do You Live With Others?</h4>
+
+    
+    <div class = "flex justify-self-center mt-[10px]">
+
+    
+    <input id="Others-Yes" type="radio" name="Others" value="Yes" onclick="show()" class="w-[2.6vw] h-[2.8vw]">
+    <span for="Others-Yes" class="text-[2.3vw] ml-[5px]">Yes</span>
+
+    <input id="Others-No" type="radio" name="Others" value="No" onclick="hide()" class="w-[2.6vw] h-[2.8vw] ml-[3vw]">
+    <span for="Others-No" class="text-[2.3vw] ml-[5px]">No</span>
+        
+    </div>
+
+    
+    <h4 id = "babyPrompt"></h4>
+
+    <div id = "babyQA" class = "flex justify-self-center mt-[10px]"></div>
+
+    <script>
+
+        function show() {
+            document.getElementById("babyPrompt").innerHTML = "Are There Any Babies In Your Household?";
+
+            document.getElementById("babyQA").innerHTML = 
+                 '<input id="Babies-Yes" type="radio" name="Babies" class="w-[2.6vw] h-[2.8vw]">' +
+                 '<span for="Babies-Yes" class="text-[2.3vw] ml-[5px]">Yes</span>' + 
+                 '<input id="Babies-No" type="radio" name="Babies" class="w-[2.6vw] h-[2.8vw] ml-[3vw]">' +
+                 '<span for="Babies-No" class="text-[2.3vw] ml-[5px]">No</span>';
+        }
+
+        function hide () {
+            document.getElementById("babyPrompt").innerHTML = ""
+            document.getElementById("babyQA").innerHTML = ""
+        }
+        
+    </script>   
+    
+    
+</div>
+
+
+<div class = "mt-[30px] md:mt-[70px] w-fit mx-auto 
+              text-center text-white text-[2.3vw] font-bold bg-[#FFC30B]
+              border-solid outline-black outline-[5px] outline-dotted
+              pl-[4vw] pr-[4vw] pb-[1.6vw] pt-[1.6vw]">
+
+    <h4>Do You Like To Exercise?</h4>
+
+    
+    <div class = "flex justify-self-center mt-[10px]">
+
+    
+    <input id="Exercise-Yes" type="radio" name="Exercise" value="Yes" class="w-[2.6vw] h-[2.8vw]">
+    <span for="Exercise-Yes" class="text-[2.3vw] ml-[5px]">Yes</span>
+
+    <input id="Exercise-No" type="radio" name="Exercise" value="No" class="w-[2.6vw] h-[2.8vw] ml-[3vw]">
+    <span for="Exercise-No" class="text-[2.3vw] ml-[5px]">No</span>
+        
+    </div>
+    
+    
+</div>
+
+
+<div class = "mt-[30px] md:mt-[70px] w-fit mx-auto 
+              text-center text-white text-[2.3vw] font-bold bg-[#FFC30B]
+              border-solid outline-black outline-[5px] outline-dotted
+              pl-[4vw] pr-[4vw] pb-[1.6vw] pt-[1.6vw]">
+
+    <h4>Are You A Busy Person?</h4>
+
+    
+    <div class = "flex justify-self-center mt-[10px]">
+
+    
+    <input id="Busy-Yes" type="radio" name="Busy" value="Yes" class="w-[2.6vw] h-[2.8vw]">
+    <span for="Busy-Yes" class="text-[2.3vw] ml-[5px]">Yes</span>
+
+    <input id="Busy-No" type="radio" name="Busy" value="No" class="w-[2.6vw] h-[2.8vw] ml-[3vw]">
+    <span for="Busy-No" class="text-[2.3vw] ml-[5px]">No</span>
+        
+    </div>
+    
+    
+</div>
+
+
+<div class = "mt-[30px] md:mt-[70px] w-fit mx-auto 
+              text-center text-white text-[2.3vw] font-bold bg-[#FFC30B]
+              border-solid outline-black outline-[5px] outline-dotted
+              pl-[4vw] pr-[4vw] pb-[1.6vw] pt-[1.6vw]">
+
+    <h4>Do You Desire A Dog For Protection?</h4>
+
+    
+    <div class = "flex justify-self-center mt-[10px]">
+
+    
+    <input id="Protection-Yes" type="radio" name="Protection" value="Yes" class="w-[2.6vw] h-[2.8vw]">
+    <span for="Protection-Yes" class="text-[2.3vw] ml-[5px]">Yes</span>
+
+    <input id="Protection-No" type="radio" name="Protection" value="No" class="w-[2.6vw] h-[2.8vw] ml-[3vw]">
+    <span for="Protection-No" class="text-[2.3vw] ml-[5px]">No</span>
+        
+    </div>
+    
+    
+</div>
+
+
+<div class = "mt-[30px] md:mt-[70px] w-fit mx-auto 
+              text-center text-white text-[2.3vw] font-bold bg-[#FFC30B]
+              border-solid outline-black outline-[5px] outline-dotted
+              pl-[4vw] pr-[4vw] pb-[1.6vw] pt-[1.6vw]">
+
+    <h4>Do You Live In Cold Weather?</h4>
+
+    
+    <div class = "flex justify-self-center mt-[10px]">
+
+    
+    <input id="Cold-Yes" type="radio" name="Cold" value="Yes" class="w-[2.6vw] h-[2.8vw]">
+    <span for="Cold-Yes" class="text-[2.3vw] ml-[5px]">Yes</span>
+
+    <input id="Cold-No" type="radio" name="Cold" value="No" class="w-[2.6vw] h-[2.8vw] ml-[3vw]">
+    <span for="Cold-No" class="text-[2.3vw] ml-[5px]">No</span>
+        
+    </div>
+    
+    
+</div>
+
+
+<div class = "mt-[40px]">
+    <button id ="submitButton" class = "flex justify-self-center
+        text-white text-[2vw] font-bold
+        hover:text-[#FFC30B] hover:text-[2.2vw]
+        border-solid rounded-3xl outline-[#FFC30B] outline-[5px] bg-black p-[7px]" 
+        onclick="dogQuiz()">Submit
+    </button>
+
+    <script>
+        
+       async function dogQuiz() {
+            var result = ""
+            
+            var age = document.getElementById("Age").value;
+            var empty_age = true
+            
+            var others = document.getElementById("Others-Yes");
+            var not_others = document.getElementById("Others-No");
+            var empty_others = true
+            
+            var babies = document.getElementById("Babies-Yes");
+            var not_babies = document.getElementById("Babies-No");
+            var empty_babies = true
+            
+            var exercise = document.getElementById("Exercise-Yes");
+            var not_exercise = document.getElementById("Exercise-No");
+            var empty_exercise = true
+        
+            var busy = document.getElementById("Busy-Yes");
+            var not_busy = document.getElementById("Busy-No");
+            var empty_busy = true
+        
+            var protection = document.getElementById("Protection-Yes");
+            var not_protection = document.getElementById("Protection-No");
+            var empty_protection = true
+        
+            var cold = document.getElementById("Cold-Yes");
+            var not_cold = document.getElementById("Cold-No");
+            var empty_cold = true
+            
+
+            if(age.trim() === ""){
+                empty_age = true
+            }
+            else{
+                result = result + "I am " + age + " years old. "
+                empty_age = false
+            }
+           
+            
+            if(others.checked){
+                result = result + "I live with other people, "
+                empty_others = false
+            
+                if(babies.checked){
+                    result = result + "including babies. "
+                    empty_babies = false
+                }
+                else if(not_babies.checked){
+                    result = result + "but not babies. "
+                    empty_babies = false
+                }
+                else {
+                    empty_babies = true
+                }
+             }
+                
+            else if(not_others.checked) {
+                result = result + "I live alone. "
+                empty_others = false
+             }
+
+            else {
+                empty_others = true
+             }
+          
+        
+            
+            if(exercise.checked){
+            result = result + "I like to exercise. "
+            empty_exercise = false
+            }
+            else if(not_exercise.checked){
+            result = result + "I don't like to exercise. "
+            empty_exercise = false
+            }
+            else{
+            empty_exercise = true
+            }
+            
+        
+            
+            if(busy.checked){
+                 result = result + "I'm a busy person. "
+                 empty_busy = false
+                }
+            else if(not_busy.checked){
+                result = result + "I'm not a busy person. "
+                empty_busy = false
+                }
+            else{
+               empty_busy = true;
+            }
+            
+            
+            
+            if(protection.checked){
+                result = result + "I'd like a dog for protection. "
+                empty_protection = false
+                }
+            else if(not_protection.checked) {
+                result = result + "I don't need a dog for protection. "
+                empty_protection = false
+                }
+            else{
+                empty_protection = true;
+            }
+            
+            if(cold.checked){
+                result = result + "I live in cold weather. "
+                empty_cold = false
+                }
+            else if(not_cold.checked){
+                result = result + "I don't live in cold weather. "
+                empty_cold = false
+                }
+            else{
+                empty_cold = true;
+            }
+        
+            
+        
+            if (empty_age === true || empty_others === true || empty_babies === true || empty_exercise === true || empty_busy === true || empty_protection === true || empty_cold === true){
+                alert("Please Answer Each Question.");
+            }
+        
+            else {
+                result = result + "Provide only a numbered list of 10 dogs that best fit my lifestyle."
+
+                const response = await fetch("/ask", {
+                    method: "POST",
+                    headers: { 'Content-Type': 'application/json' 
+                },
+                    body: JSON.stringify({ prompt: result }),
+                    max_tokens: 100 
+                  });
+                
+                  const data = await response.json();
+                  
+                  var output = data.reply;
+                  var dogs = output.split('\n');
+            
+            
+                  localStorage.setItem("dogResults", JSON.stringify(dogs));
+                  window.location.href = "results.html"
+            }
+                
+    }
+
+    </script>
+
+
+</div>
+
+
+
+<footer class="bg-black text-center py-[5vh] mt-25">
+  <p class="text-sm text-white"></p>
+  <img src = "https://icons.veryicon.com/png/o/miscellaneous/home-objects-misc/dog-food.png" class= "flex justify-self-center w-[3vw] h-[3vw]">  
+   
+</footer>
+    
+
+</body>
+    
+</html>
