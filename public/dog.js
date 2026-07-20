@@ -9,7 +9,7 @@ function dogResults() {
                 
                 const link = document.createElement("a");
 
-                link.href = "https://www.petmd.com/dog/breeds/" + dogName.toLowerCase().slice(1);;
+                link.href = "https://www.petmd.com/dog/breeds/" + dogName.toLowerCase();
                 link.textContent = dogResults[i];
                 document.getElementById(String(i)).appendChild(link);
                 // dogNum.innerText = dogResults[i];
