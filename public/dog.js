@@ -5,7 +5,7 @@ function dogResults() {
             for(let i = 0; i < 10; i++) {
                
                 const dogNum = document.getElementById(String(i));
-                const dogName = dogResults[i].replace(/[^a-zA-Z ]/g, '').replace(/ /g, '-');
+                const dogName = dogResults[i].replace(/[^a-zA-Z ]/g, '').replace(/ /g, '');
                 
                 const link = document.createElement("a");
 
