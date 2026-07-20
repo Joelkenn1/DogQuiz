@@ -5,11 +5,15 @@ function dogResults() {
             for(let i = 0; i < 10; i++) {
                
                 const dogNum = document.getElementById(String(i));
-                const dogName = dogResults[i].replace(/[^a-zA-Z ]/g, '').replace(/ /g, '-');
+                const dogName = dogResults[i]
+                    .replace(/[^a-zA-Z ]/g, '')
+                    .trim()
+                    .toLowerCase()
+                    .replace(/\s+/g, '-');
                 
                 const link = document.createElement("a");
 
-                link.href = "https://www.petmd.com/dog/breeds/" + dogName.toLowerCase().slice(1);;
+                link.href = "https://www.petmd.com/dog/breeds/" + dogName;
                 link.textContent = dogResults[i];
                 document.getElementById(String(i)).appendChild(link);
                 // dogNum.innerText = dogResults[i];
