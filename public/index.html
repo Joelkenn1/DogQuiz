@@ -271,6 +271,11 @@
     </button>
 
     <script>
+        function setSubmitButtonState(isLoading) {
+            const submitButton = document.getElementById("submitButton");
+            submitButton.textContent = isLoading ? "Loading..." : "Submit";
+            submitButton.disabled = isLoading;
+        }
         
        async function dogQuiz() {
             var result = ""
@@ -395,27 +400,38 @@
             
             if (empty_age === true || empty_others === true || (others.checked === true && empty_babies === true) || empty_exercise === true || empty_busy === true || empty_protection === true || empty_cold === true){
                 alert("Please Answer Each Question.");
+                setSubmitButtonState(false);
+                return;
             }
         
             else {
                 result = result + "Provide only a numbered list of 10 dogs that best fit my lifestyle."
+                setSubmitButtonState(true);
 
-                const response = await fetch("/ask", {
-                    method: "POST",
-                    headers: { 'Content-Type': 'application/json' 
-                },
-                    body: JSON.stringify({ prompt: result }),
-                    max_tokens: 100 
-                  });
+                try {
+                    const response = await fetch("/ask", {
+                        method: "POST",
+                        headers: { 'Content-Type': 'application/json' 
+                    },
+                        body: JSON.stringify({ prompt: result }),
+                        max_tokens: 100 
+                      });
+                    
+                    if (!response.ok) {
+                        throw new Error("Request failed");
+                    }
+
+                    const data = await response.json();
+                    
+                    var output = data.reply;
+                    var dogs = output.split('\n');
                 
-                  const data = await response.json();
-                  
-                  var output = data.reply;
-                  var dogs = output.split('\n');
-            
-            
-                  localStorage.setItem("dogResults", JSON.stringify(dogs));
-                  window.location.href = "results.html"
+                    localStorage.setItem("dogResults", JSON.stringify(dogs));
+                    window.location.href = "results.html"
+                } catch (error) {
+                    setSubmitButtonState(false);
+                    alert("There was a problem loading your results. Please try again.");
+                }
             }
                 
     }
