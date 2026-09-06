@@ -393,8 +393,7 @@
             }
         
             
-        
-            if (empty_age === true || empty_others === true || empty_babies === true || empty_exercise === true || empty_busy === true || empty_protection === true || empty_cold === true){
+            if (empty_age === true || empty_others === true || (others.checked === true && empty_babies === true) || empty_exercise === true || empty_busy === true || empty_protection === true || empty_cold === true){
                 alert("Please Answer Each Question.");
             }
         
